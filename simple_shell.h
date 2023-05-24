@@ -30,16 +30,19 @@ int _strcmp(const char *s1, const char *s2);
 char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 
-/* PATH */
+/* PATH.c */
 
 char **_splitbuffer(char *buffer);
 int _splitPATH(char *str);
 int _PATHcompare(const char *str1, const char *str2);
 char *_concat(char *tmp, char **av, char *tok);
 
-/**/
+/* helper.c */
 
+char *_getenviron(const char *name);
+int _env(void);
+void _puts(char *s);
+int _putchar(char c);
+char *_memset(char *s, char b, unsigned int n);
 
-
-
-
+#endif
