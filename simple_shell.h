@@ -12,8 +12,8 @@
 #include <string.h>
 #include <signal.h>
 
-extern char **environ; 
- 
+extern char **environ;
+
 /* mainFunction.c */
 
 void prompt(void);

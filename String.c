@@ -28,7 +28,7 @@ char *_strdup(char *str)
 
 /**
  * _splitstring - counts number of words in string
- * @str: pointer to a string 
+ * @str: pointer to a string
  *
  * Return: number of words in string
  */
@@ -90,7 +90,7 @@ char *_strcat(char *dest, char *src)
 /**
  * _strlen - returns the length of a string
  * @s: string
- * 
+ *
  * Return: lenght of a string
  */
 int _strlen(char *s)

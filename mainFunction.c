@@ -8,15 +8,15 @@
 
 void prompt(void)
 {
-    int w;
-    char *prompt = "($) ";
+	int w;
+	char *prompt = "($) ";
 
-    if (isatty(STDIN_FILENO) == 1)
-    {
-        w = write(STDOUT_FILENO, prompt, 4);
-    }
-    if (w == -1)
-        exit(0);
+	if (isatty(STDIN_FILENO) == 1)
+	{
+		w = write(STDOUT_FILENO, prompt, 4);
+	}
+	if (w == -1)
+		exit(0);
 }
 
 /**
@@ -26,30 +26,30 @@ void prompt(void)
 
 char *_read(void)
 {
-    int i, w, count, *n;
-    char *buffer = NULL;
+	int i, w, count, *n;
+	char *buffer = NULL;
 
-    count = getline(&buffer, &n, stdin);
-    if (count == -1)
-    {
-        free(buffer);
-        if (isatty(STDIN_FILENO) != 0)
-            write(STDOUT_FILENO, "\n", 1);
-        exit(0);
-    }
-    if (buffer[count - 1] == '\n')
-    {
-        buffer[count - 1] = '\0';
-    }
-    for (i = 0; buffer[i]; i++)
-    {
-        if (buffer[i] == '#' && buffer[i - 1] == ' ')
-        {
-            buffer[i] = '\0';
-            break;
-        }
-    }
-    return (buffer);
+	count = getline(&buffer, &n, stdin);
+	if (count == -1)
+	{
+		free(buffer);
+		if (isatty(STDIN_FILENO) != 0)
+		write(STDOUT_FILENO, "\n", 1);
+		exit(0);
+	}
+	if (buffer[count - 1] == '\n')
+	{
+		buffer[count - 1] = '\0';
+	}
+	for (i = 0; buffer[i]; i++)
+	{
+		if (buffer[i] == '#' && buffer[i - 1] == ' ')
+		{
+			buffer[i] = '\0';
+			break;
+		}
+	}
+	return (buffer);
 }
 
 /**
@@ -57,7 +57,7 @@ char *_read(void)
 * @av: pointer to array of user of strings
 * @buffer: pointer to user string
 * @exitstatus: exit status of execve
-* Return: 1 if the string is equal env or 0 other wise  
+* Return: 1 if the string is equal env or 0 other wise
 */
 int builtinFunction(char **av, char *buffer, int exitstatus)
 {
