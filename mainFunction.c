@@ -26,8 +26,9 @@ void prompt(void)
 
 char *_read(void)
 {
-	int i, w, count, *n;
+	int i, count;
 	char *buffer = NULL;
+	size_t n = 0;
 
 	count = getline(&buffer, &n, stdin);
 	if (count == -1)

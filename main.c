@@ -23,7 +23,7 @@ int main(void)
 		buffer = _read();
 		if (*buffer != '\0')
 		{
-			av = splitbuffer(buffer);
+			av = _splitbuffer(buffer);
 			if (av == NULL)
 			{
 				free(buffer);
