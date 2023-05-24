@@ -1,16 +1,18 @@
+#include "simple_shell.h"
+
 /**
- * _getenv - gets PATH member from environ
- * @name: pointer to PATH string
+ * _getenviron - gets PATH member from environ
+ * @name: pointer to PATH 
  *
- * Return: pointer to PATH member string or NULL if not found
+ * Return: pointer to PATH or NULL if not found
  */
-char *_getenv(const char *name)
+char *_getenviron(const char *name)
 {
 	int i, result;
 
 	for (i = 0; environ[i]; i++)
 	{
-		result = _PATHstrcmp(name, environ[i]);
+		result = _PATHcompare(name, environ[i]);
 		if (result == 0)
 		{
 			return (environ[i]);
@@ -33,14 +35,14 @@ int _env(void)
 }
 /**
  * _puts - prints a string
- * @str: string to print
+ * @s: string to print
  */
-void _puts(char *str)
+void _puts(char *s)
 {
 	int c;
 
-	for (c = 0; str[c] != '\0'; c++)
-		_putchar(str[c]);
+	for (c = 0; s[c] != '\0'; c++)
+		_putchar(s[c]);
 	_putchar('\n');
 }
 /**
