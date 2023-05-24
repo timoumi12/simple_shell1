@@ -34,8 +34,8 @@ char *_read(void)
 	if (count == -1)
 	{
 		free(buffer);
-		if (isatty(STDIN_FILENO) != 0)
-		write(STDOUT_FILENO, "\n", 1);
+		/*if (isatty(STDIN_FILENO) != 0)*/
+		/*write(STDOUT_FILENO, "\n", 1);*/
 		exit(0);
 	}
 	if (buffer[count - 1] == '\n')
