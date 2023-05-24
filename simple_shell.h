@@ -22,7 +22,15 @@ int builtinFunction(char **av, char *buffer, int exitstatus);
 int _fork(char **av, char *buffer, char *fullpathbuffer);
 char *_fullpathbuffer(char **av, char *PATH, char *copy);
 
-/*String.c*/
+/* String.c */
+
+char *_strdup(char *str);
+int _splitstring(char *str);
+int _strcmp(const char *s1, const char *s2);
+char *_strcat(char *dest, char *src);
+int _strlen(char *s);
+
+/* PATH */
 
 
 
