@@ -2,7 +2,7 @@
 
 /**
  * _getenviron - gets PATH member from environ
- * @name: pointer to PATH 
+ * @name: pointer to PATH
  *
  * Return: pointer to PATH or NULL if not found
  */
